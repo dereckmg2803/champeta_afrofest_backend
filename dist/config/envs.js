@@ -11,6 +11,7 @@ exports.envs = {
     DATABASE_HOST: (0, env_var_1.get)("DATABASE_HOST").required().asString(),
     DATABASE_PORT: (0, env_var_1.get)("DATABASE_PORT").required().asPortNumber(),
     DATABASE_NAME: (0, env_var_1.get)("DATABASE_NAME").required().asString(),
+    RESEND_API_KEY: (0, env_var_1.get)("RESEND_API_KEY").required().asString(),
     JWT_KEY: (0, env_var_1.get)('JWT_KEY').required().asString(),
     JWT_EXPIRE_IN: (0, env_var_1.get)('JWT_EXPIRE_IN').required().asString(),
     MAILER_SERVICE: (0, env_var_1.get)('MAILER_SERVICE').required().asString(),

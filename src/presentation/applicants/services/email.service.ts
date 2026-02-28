@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { envs } from '../../../config';
+const resend = new Resend(envs.RESEND_API_KEY);
 
 export const sendCommunityWelcomeEmail = async (
     userEmail: string,

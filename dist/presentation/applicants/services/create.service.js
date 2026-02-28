@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreatorCommunityMemberService = void 0;
 const data_1 = require("../../../data");
+const email_service_1 = require("../services/email.service");
 class CreatorCommunityMemberService {
     execute(dto) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -24,6 +25,7 @@ class CreatorCommunityMemberService {
             member.message = dto.message;
             try {
                 yield member.save();
+                yield (0, email_service_1.sendCommunityWelcomeEmail)(member.email, member.name);
                 return {
                     message: 'Community member registered successfully',
                     data: member
