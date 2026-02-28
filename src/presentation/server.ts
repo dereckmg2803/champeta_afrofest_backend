@@ -13,8 +13,7 @@ interface Options {
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
-  'https://deleonrehab-six.vercel.app',
-  'https://deleonrehab.com',
+  'https://champetaafrofest.com',
 ];
 
 const corsOptions = {
