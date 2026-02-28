@@ -160,7 +160,7 @@ export const sendCommunityWelcomeEmail = async (
         // Copia a la empresa
         await resend.emails.send({
             from: 'Champeta AfroFest <no-reply@mail.champetaafrofest.com>',
-            to: 'dexmontgarcex@gmail.com',
+            to: 'champetaafrofest@gmail.com',
             subject: '📋 Nuevo miembro en la comunidad - Champeta AfroFest',
             html: `
 <!DOCTYPE html>
