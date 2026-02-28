@@ -22,8 +22,7 @@ const hpp_1 = __importDefault(require("hpp"));
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://deleonrehab-six.vercel.app',
-    'https://deleonrehab.com',
+    'https://champetaafrofest.com',
 ];
 const corsOptions = {
     origin: (origin, callback) => {
