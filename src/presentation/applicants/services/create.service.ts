@@ -1,6 +1,6 @@
 import { CommunityMember } from '../../../data';
 import { CreateCommunityMemberDto } from '../../../domain/dtos/applicants/create-applicant.dto';
-
+import { sendCommunityWelcomeEmail } from '../services/email.service';
 export class CreatorCommunityMemberService {
 
     async execute(dto: CreateCommunityMemberDto) {
@@ -17,7 +17,7 @@ export class CreatorCommunityMemberService {
 
         try {
             await member.save();
-
+            await sendCommunityWelcomeEmail(member.email, member.name);
             return {
                 message: 'Community member registered successfully',
                 data: member
