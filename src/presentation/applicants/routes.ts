@@ -12,9 +12,9 @@ export class ApplicantsRoutes {
         const service = new CreatorCommunityMemberService();
         const controller = new ApplicantsController(service);
 
-        router.post('/applicants', upload.single('cv'), controller.createApplicant);
-        router.get('/applicants', controller.getAll);
-        router.get('/applicants/:id', controller.getById);
+        router.post('/community-members', upload.single('cv'), controller.createApplicant);
+        router.get('/community-members', controller.getAll);
+        router.get('/community-members/:id', controller.getById);
 
         return router;
     }
